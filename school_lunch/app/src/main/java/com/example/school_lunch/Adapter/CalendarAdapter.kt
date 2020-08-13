@@ -66,6 +66,7 @@ class CalendarAdapter(private val scheduleList: List<AcademicCalendarF.Schedule>
         }
     }
 
+
     fun changeToNextMonth() {
         baseCalendar.changeToNextMonth {
             onMonthChangeListener?.onMonthChanged(it)
@@ -73,9 +74,11 @@ class CalendarAdapter(private val scheduleList: List<AcademicCalendarF.Schedule>
         }
     }
 
+
     interface OnMonthChangeListener {
         fun onMonthChanged(calendar : Calendar)
     }
+
 
     class CalendarItemViewHolder(containerView: View) : RecyclerView.ViewHolder(containerView)
 }

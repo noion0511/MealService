@@ -8,8 +8,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.school_lunch.Adapter.ClassAdapter
 import com.example.school_lunch.R
+import kotlinx.android.synthetic.main.fragment_class_schedule.*
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.select.Elements
@@ -28,6 +32,7 @@ class ClassScheduleF : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    var class_rv_list : RecyclerView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +47,11 @@ class ClassScheduleF : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_class_schedule, container, false)
+        val view = inflater.inflate(R.layout.fragment_class_schedule, container, false)
+        class_rv_list = view.findViewById(R.id.class_rv_list)
+        class_rv_list?.adapter = ClassAdapter()
+        class_rv_list?.layoutManager = GridLayoutManager(view.context,5)
+        return view
     }
 
     companion object {
@@ -65,5 +74,5 @@ class ClassScheduleF : Fragment() {
             }
     }
 
-
+    data class MainData(val title:String, val content:String)
 }

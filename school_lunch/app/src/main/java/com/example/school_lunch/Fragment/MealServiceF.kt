@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.school_lunch.Adapter.MealAdapter
@@ -51,6 +52,7 @@ class MealServiceF : Fragment() {
         val view = inflater.inflate(R.layout.fragment_meal_service, container, false)
         rv  = view.findViewById(R.id.meal_rv_list)
         rv?.layoutManager = LinearLayoutManager(view.context, RecyclerView.VERTICAL, false)
+        rv?.scrollToPosition(1)
 
         MealAsyncTask().execute(Weburl)
 

@@ -2,6 +2,7 @@ package com.example.school_lunch.Adapter
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.util.Log
 import android.view.LayoutInflater
@@ -31,5 +32,11 @@ class MealAdapter(val items: List<MealServiceF.Item>, val context: Context?) : R
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemView.meal_title?.text = items.get(position).day.toString()
         holder.itemView.meal_contents?.text = items.get(position).meal
+        val pos = holder.adapterPosition
+        if(pos != RecyclerView.NO_POSITION) {
+            if(pos == 2){
+                holder.itemView.meal_item.setBackgroundColor(context?.resources?.getColor(R.color.mainColor6) ?:Color.BLUE)
+            }
+        }
     }
 }
