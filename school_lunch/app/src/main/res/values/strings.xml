@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">school_lunch</string>
+
+    <string name="calendar">Calendar</string>
+    <string name="meal">Meal</string>
+    <string name="schedule">Schedule</string>
+    <string name="community">Community</string>
+    <string name="setting">Setting</string>
+
+    <string name="fg_cal_mon">2020 07</string>
+    <string name="fg_cal_pre">P</string>
+    <string name="fg_cal_next">N</string>
+
+    <string name="sun">S</string>
+    <string name="mon">M</string>
+    <string name="tue">T</string>
+    <string name="wed">W</string>
+    <string name="thu">T</string>
+    <string name="fri">F</string>
+    <string name="sat">S</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
