@@ -6,123 +6,196 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.SettingF">
 
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <View
-            android:id="@+id/view6"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="5dp" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView121"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="내 활동"
-            android:textSize="20dp" />
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
 
-        <View
-            android:id="@+id/view41"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray"
-            app:layout_constraintBottom_toTopOf="@+id/main_menu"
-            app:layout_constraintEnd_toEndOf="@+id/vp_ac_main_frag_pager"
-            app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/textView121"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="초기화"
+                android:textSize="22dp"
+                android:gravity="center"
+                android:fontFamily="@font/cafe24dangdanghae"/>
 
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="학교 설정" />
+            <View
+                android:id="@+id/view41"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="내가 쓴 글" />
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="학교 설정 초기화"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/backColor2"
+                android:fontFamily="@font/cafe24ohsquareair"
+                android:textSize="20dp"/>
 
-        <Button
-            android:id="@+id/button21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="내가 쓴 댓글" />
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="앱 초기화"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/backColor2"
+                android:fontFamily="@font/cafe24ohsquareair"
+                android:textSize="20dp"/>
 
-        <View
-            android:id="@+id/view51"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            <View
+                android:id="@+id/view51"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
-        <TextView
-            android:id="@+id/textView122"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="알림 설정"
-            android:textSize="20dp" />
+            <TextView
+                android:id="@+id/textView122"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="알림 설정"
+                android:textSize="22dp"
+                android:gravity="center"
+                android:fontFamily="@font/cafe24dangdanghae"/>
 
-        <View
-            android:id="@+id/view42"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray"
-            app:layout_constraintBottom_toTopOf="@+id/main_menu"
-            app:layout_constraintEnd_toEndOf="@+id/vp_ac_main_frag_pager"
-            app:layout_constraintStart_toStartOf="parent" />
+            <View
+                android:id="@+id/view42"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="알림 온/오프" />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="알림 온/오프"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/backColor2"
+                android:fontFamily="@font/cafe24ohsquareair"
+                android:textSize="20dp"/>
 
-        <Button
-            android:id="@+id/button22"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="알림 세부 설정" />
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="알림 세부 설정"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/backColor2"
+                android:fontFamily="@font/cafe24ohsquareair"
+                android:textSize="20dp"/>
 
-        <View
-            android:id="@+id/view52"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            <View
+                android:id="@+id/view52"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="내 의견"
-            android:textSize="20dp" />
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="의견 및 평가"
+                android:textSize="22dp"
+                android:gravity="center"
+                android:fontFamily="@font/cafe24dangdanghae"/>
 
-        <View
-            android:id="@+id/view4"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray"
-            app:layout_constraintBottom_toTopOf="@+id/main_menu"
-            app:layout_constraintEnd_toEndOf="@+id/vp_ac_main_frag_pager"
-            app:layout_constraintStart_toStartOf="parent" />
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="앱 평가하기" />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="앱 평가하기"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/backColor2"
+                android:fontFamily="@font/cafe24ohsquareair"
+                android:textSize="20dp"/>
 
-        <Button
-            android:id="@+id/button23"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="개발자에게 의견 보내기" />
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="개발자에게 의견 보내기"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/backColor2"
+                android:fontFamily="@font/cafe24ohsquareair"
+                android:textSize="20dp"/>
 
-        <View
-            android:id="@+id/view5"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-    </LinearLayout>
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
+            <TextView
+                android:id="@+id/text123"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="라이센스"
+                android:textSize="22dp"
+                android:gravity="center"
+                android:fontFamily="@font/cafe24dangdanghae"/>
+
+            <View
+                android:id="@+id/view4245"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:id="@+id/button837"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="사용한 라이센스"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/backColor2"
+                android:fontFamily="@font/cafe24ohsquareair"
+                android:textSize="20dp"/>
+
+            <View
+                android:id="@+id/view66"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

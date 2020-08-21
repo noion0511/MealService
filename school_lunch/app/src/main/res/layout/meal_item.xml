@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginRight="10dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -20,7 +19,8 @@
             android:paddingTop="20dp"
             android:text="@string/calendar"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/cafe24dangdanghae"/>
 
         <TextView
             android:id="@+id/meal_title_day"
@@ -30,7 +30,7 @@
             android:paddingRight="20dp"
             android:text="일"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/cafe24dangdanghae"/>
 
     </LinearLayout>
 
@@ -43,7 +43,8 @@
         android:paddingRight="20dp"
         android:paddingBottom="20dp"
         android:text="@string/calendar"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:fontFamily="@font/cafe24ohsquareair"/>
 
     <View
         android:id="@+id/mealItemView1"

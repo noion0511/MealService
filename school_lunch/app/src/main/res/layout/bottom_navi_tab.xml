@@ -22,7 +22,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="12dp"
-            android:src="@drawable/selector_calendar_icon" />
+            android:src="@drawable/selector_calendar_icon"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -83,7 +83,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="12dp"
-            android:src="@drawable/selector_community_icon" />
+            android:src="@drawable/selector_notice_icon" />
     </RelativeLayout>
 
     <RelativeLayout

@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">school_lunch</string>
+    <string name="app_name">포켓스쿨</string>
 
-    <string name="calendar">Calendar</string>
-    <string name="meal">Meal</string>
-    <string name="schedule">Schedule</string>
-    <string name="community">Community</string>
-    <string name="setting">Setting</string>
+    <string name="calendar">학사일정</string>
+    <string name="meal">식단</string>
+    <string name="schedule">시간표</string>
+    <string name="notice">공지사항</string>
+    <string name="setting">설정</string>
 
     <string name="fg_cal_mon">2020 07</string>
     <string name="fg_cal_pre">P</string>

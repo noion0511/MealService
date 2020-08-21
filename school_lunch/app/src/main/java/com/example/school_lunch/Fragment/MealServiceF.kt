@@ -86,13 +86,10 @@ class MealServiceF : Fragment() {
             val doc: Document = Jsoup.connect("$Weburl").get()
             val tables: Elements = doc.select("table.tb_calendar")
             val elts: Elements = tables[0].select("td")
-            //Log.d("printLTS", elts.toString())
 
             val validBoxList = elts.filter{
                 it.text().trim() != ""
             }
-
-            Log.d("Crawl", "validBox number: ${validBoxList.size.toString()}")
 
 
             val list = validBoxList.mapIndexed { index, elem ->
@@ -100,13 +97,11 @@ class MealServiceF : Fragment() {
                 val findDayRegex = Regex("\\d+")
                 val day = findDayRegex.find(elem.text())?.value?.toInt() ?: -1
                 if(mealElemnt.size == 0) {
-                    Item(day, "급식 안함")
+                    Item(day, "급식이 없는 날:)")
                 } else {
                     Item(day, mealElemnt.text())
                 }
             }
-
-            Log.d("Crawl", list.size.toString())
 
             return list
         }
@@ -121,7 +116,6 @@ class MealServiceF : Fragment() {
     private fun setList(result: List<Item>) {
         val nowItem = result.find { item ->
             val now = Date()
-            Log.d("findNow", "now day : ${now.date}")
             item.day == now.date
         } ?: throw Exception("there is no now day item")
         val nowItemIndex = result.indexOf(nowItem)

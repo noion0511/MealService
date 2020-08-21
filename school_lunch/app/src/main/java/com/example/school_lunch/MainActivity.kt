@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                     main_menu.getTabAt(0)->resources.getText(R.string.calendar)
                     main_menu.getTabAt(1)->resources.getText(R.string.schedule)
                     main_menu.getTabAt(2)->resources.getText(R.string.meal)
-                    main_menu.getTabAt(3)->resources.getText(R.string.community)
+                    main_menu.getTabAt(3)->resources.getText(R.string.notice)
                     main_menu.getTabAt(4)->resources.getText(R.string.setting)
                     else -> "Error"
                 }

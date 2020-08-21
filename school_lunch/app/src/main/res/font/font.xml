@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        android:font="@font/cafe24danjunghae" />
+    <font
+        android:font="@font/cafe24dangdanghae" />
+    <font
+        android:font="@font/cafe24ssurround" />
+    <font
+        android:font="@font/cafe24ohsquareair" />
+</font-family>

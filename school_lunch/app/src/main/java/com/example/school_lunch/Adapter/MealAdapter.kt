@@ -20,7 +20,7 @@ class MealAdapter(val items: List<MealServiceF.Item>, val context: Context?) : R
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MealAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.meal_item, parent, false)
         return ViewHolder(v)
     }
@@ -35,7 +35,7 @@ class MealAdapter(val items: List<MealServiceF.Item>, val context: Context?) : R
         val pos = holder.adapterPosition
         if(pos != RecyclerView.NO_POSITION) {
             if(pos == 2){
-                holder.itemView.meal_item.setBackgroundColor(context?.resources?.getColor(R.color.mainColor6) ?:Color.BLUE)
+                //holder.itemView.meal_item.setBackgroundColor(context?.resources?.getColor(R.color.mainColor6) ?:Color.BLUE)
             }
         }
     }

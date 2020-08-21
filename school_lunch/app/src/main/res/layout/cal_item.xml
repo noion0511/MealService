@@ -2,30 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
+    android:layout_height="75dp"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="3dp"
-        android:text="asdasd"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/academicSchedule"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="3dp"
-        android:text="very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text very long text "
-        android:textSize="12dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="asdasd"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:fontFamily="@font/cafe24dangdanghae"/>
+
+            <TextView
+                android:id="@+id/academicSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:text="very long text very long text "
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/cafe24dangdanghae"/>
+
+            <View
+                android:id="@+id/classView2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/classView4"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray" />
+    </LinearLayout>
 </LinearLayout>

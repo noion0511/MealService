@@ -111,13 +111,10 @@ class AcademicCalendarF : Fragment(), CalendarAdapter.OnMonthChangeListener{
             val doc: Document = Jsoup.connect("$Weburl").get()
             val tables: Elements = doc.select("table.tb_calendar")
             val elts: Elements = tables[0].select("td")
-            Log.d("printLTS", elts.toString())
 
             val validBoxList = elts.filter{
                 it.text().trim() != "" && it.select("a, span").size != 0
             }
-
-            Log.d("Crawl", "validBox number: ${validBoxList.size.toString()}")
 
 
             val list = validBoxList.mapIndexed { index, elem ->
@@ -125,11 +122,9 @@ class AcademicCalendarF : Fragment(), CalendarAdapter.OnMonthChangeListener{
                 val holiday = elem.select("span")
                 val findDayRegex = Regex("\\d+")
                 val day = findDayRegex.find(elem.text())?.value?.toInt() ?: -1
-//                Log.d("printLTS", "${scheduleElemnt}")
                 Log.d("printData", "day=$day, schedule=${scheduleElemnt.text()}, holiday=${holiday.text()}")
                 Schedule(day, scheduleElemnt.text(),holiday.text())
             }
-            Log.d("Crawl", list.size.toString())
             return list
         }
 

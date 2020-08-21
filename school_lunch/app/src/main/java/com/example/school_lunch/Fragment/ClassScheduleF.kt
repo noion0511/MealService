@@ -50,7 +50,7 @@ class ClassScheduleF : Fragment() {
         val view = inflater.inflate(R.layout.fragment_class_schedule, container, false)
         class_rv_list = view.findViewById(R.id.class_rv_list)
         class_rv_list?.adapter = ClassAdapter()
-        class_rv_list?.layoutManager = GridLayoutManager(view.context,5)
+        class_rv_list?.layoutManager = GridLayoutManager(view.context,6)
         return view
     }
 
@@ -74,5 +74,5 @@ class ClassScheduleF : Fragment() {
             }
     }
 
-    data class MainData(val title:String, val content:String)
+    data class ClassData(val content:String)
 }
