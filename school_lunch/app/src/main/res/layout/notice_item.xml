@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/notice"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
@@ -13,7 +14,7 @@
         <TextView
             android:id="@+id/notice_number"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
@@ -30,14 +31,15 @@
 
             <TextView
                 android:id="@+id/notice_title"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingTop="20dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
                 android:text="청소년 도박문제에 대한 인식증진과 개선을 위한 공모전 안내"
                 android:textSize="20dp"
+                android:textColor="@color/grayColor4"
                 android:fontFamily="@font/cafe24ohsquareair"/>
 
             <LinearLayout

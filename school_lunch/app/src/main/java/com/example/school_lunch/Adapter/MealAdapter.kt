@@ -41,7 +41,14 @@ class MealAdapter(val items: List<MealServiceF.Item>, val context: Context?) : R
         val pos = holder.adapterPosition
         if(pos != RecyclerView.NO_POSITION) {
             if(pos == 2){
-                //holder.itemView.meal_item.setBackgroundColor(context?.resources?.getColor(R.color.mainColor6) ?:Color.BLUE)
+                holder.itemView.meal_item.meal_title.setBackgroundColor(Color.parseColor("#fddb3a"))
+                holder.itemView.meal_item.meal_title_day.setBackgroundColor(Color.parseColor("#fddb3a"))
+                holder.itemView.meal_item.meal_title_month.setBackgroundColor(Color.parseColor("#fddb3a"))
+                holder.itemView.meal_item.meal_month.setBackgroundColor(Color.parseColor("#fddb3a"))
+                holder.itemView.meal_item.meal_title.setTextColor(Color.parseColor("#000000"))
+                holder.itemView.meal_item.meal_title_day.setTextColor(Color.parseColor("#000000"))
+                holder.itemView.meal_item.meal_title_month.setTextColor(Color.parseColor("#000000"))
+                holder.itemView.meal_item.meal_month.setTextColor(Color.parseColor("#000000"))
             }
         }
     }

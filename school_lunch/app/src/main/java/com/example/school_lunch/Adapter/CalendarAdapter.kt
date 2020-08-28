@@ -2,7 +2,6 @@ package com.example.school_lunch.Adapter
 
 
 import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -52,10 +51,9 @@ class CalendarAdapter(private val scheduleList: List<AcademicCalendarF.Schedule>
 
 
         if(scheduleList?.find { it.day == day }?.holiday==""){
-            holder.itemView.tv_date.setTextColor(Color.parseColor("#fddb3a"))
+            holder.itemView.tv_date.setBackgroundColor(Color.parseColor("#fddb3a"))
+            holder.itemView.tv_date.setTextColor(Color.parseColor("#393b44"))
         }
-
-        Log.d("Schedule size", "size of schedule = ${scheduleList?.size ?: 0}")
     }
 
 

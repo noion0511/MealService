@@ -17,12 +17,13 @@
 
             <TextView
                 android:id="@+id/tv_date"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="asdasd"
                 android:textSize="15dp"
                 android:textStyle="bold"
                 android:layout_gravity="center"
+                android:gravity="center"
                 android:fontFamily="@font/cafe24dangdanghae"/>
 
             <TextView

@@ -3,7 +3,6 @@ package com.example.school_lunch.Fragment
 import android.annotation.SuppressLint
 import android.os.AsyncTask
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -74,7 +73,6 @@ class NoticeF : Fragment() {
                 val numberList = numberRegex.findAll(jsCode).toList()
                 val urlCode = numberList[1].value
                 val realUrl = "http://jungang.jje.hs.kr/jungang-h/0201/board/16395/$urlCode"
-                Log.d("printNotice","title=$title, writer=$writer, day=$day")
                 if(number==""){
                     NoticeItem("[공지]",title,writer,day,realUrl)
                 }

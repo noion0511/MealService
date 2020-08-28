@@ -24,8 +24,8 @@
     <color name="blueColor3">#40a8c4</color>
     <color name="blueColor4">#a2d5f2</color>
 
-    <color name="greyColor1">#f1f3f8</color>
-    <color name="greyColor2">#d6e0f0</color>
-    <color name="greyColor3">#8d93ab</color>
-    <color name="greyColor4">#393b44</color>
+    <color name="grayColor1">#f1f3f8</color>
+    <color name="grayColor2">#d6e0f0</color>
+    <color name="grayColor3">#8d93ab</color>
+    <color name="grayColor4">#393b44</color>
 </resources>
