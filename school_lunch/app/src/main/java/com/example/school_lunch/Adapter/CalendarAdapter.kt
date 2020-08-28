@@ -1,28 +1,18 @@
 package com.example.school_lunch.Adapter
 
-
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isInvisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.school_lunch.BaseCalendar
 import com.example.school_lunch.Fragment.AcademicCalendarF
 
 import com.example.school_lunch.R
 import kotlinx.android.synthetic.main.cal_item.view.*
-import java.util.*
 
-class CalendarAdapter(private val scheduleList: List<AcademicCalendarF.Schedule>? = null, private val onMonthChangeListener: OnMonthChangeListener? = null) : RecyclerView.Adapter<CalendarAdapter.CalendarItemViewHolder>() {
-
-    private val baseCalendar = BaseCalendar()
-
-    init {
-        baseCalendar.initBaseCalendar {
-            onMonthChangeListener?.onMonthChanged(it)
-        }
-        notifyDataSetChanged()
-    }
+class CalendarAdapter(private val baseCalendar: BaseCalendar, private val scheduleList: List<AcademicCalendarF.Schedule>? = null) : RecyclerView.Adapter<CalendarAdapter.CalendarItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CalendarItemViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.cal_item, parent, false)
@@ -40,43 +30,29 @@ class CalendarAdapter(private val scheduleList: List<AcademicCalendarF.Schedule>
 
         val day = baseCalendar.data[position]
 
-        if (position < baseCalendar.preMonth
-            || position >= baseCalendar.preMonth + baseCalendar.currentMonth) {
-            holder.itemView.tv_date.alpha = 0.3f
-        } else {
-            holder.itemView.tv_date.alpha = 1f
-        }
         holder.itemView.tv_date.text = baseCalendar.data[position].toString()
         holder.itemView.academicSchedule.text = scheduleList?.find { schedule -> schedule.day == day }?.schedule ?: ""
 
+        if(holder.itemView.academicSchedule.text != "") {
+            holder.itemView.tv_date.setBackgroundColor(Color.parseColor("#1C0099"))
+            holder.itemView.tv_date.setTextColor(Color.parseColor("#FFFFFF"))
+        }
 
         if(scheduleList?.find { it.day == day }?.holiday==""){
             holder.itemView.tv_date.setBackgroundColor(Color.parseColor("#fddb3a"))
             holder.itemView.tv_date.setTextColor(Color.parseColor("#393b44"))
         }
-    }
 
-
-    fun changeToPrevMonth() {
-        baseCalendar.changeToPrevMonth {
-            onMonthChangeListener?.onMonthChanged(it)
-            notifyDataSetChanged()
+        if (position < baseCalendar.preMonth
+            || position >= baseCalendar.preMonth + baseCalendar.currentMonth) {
+            holder.itemView.tv_date.alpha = 0.3f
+            holder.itemView.tv_date.setTextColor(Color.parseColor("#8d93ab"))
+            holder.itemView.tv_date.setBackgroundColor(Color.WHITE)
+            holder.itemView.academicSchedule.setText("")
+        } else {
+            holder.itemView.tv_date.alpha = 1f
         }
     }
-
-
-    fun changeToNextMonth() {
-        baseCalendar.changeToNextMonth {
-            onMonthChangeListener?.onMonthChanged(it)
-            notifyDataSetChanged()
-        }
-    }
-
-
-    interface OnMonthChangeListener {
-        fun onMonthChanged(calendar : Calendar)
-    }
-
 
     class CalendarItemViewHolder(containerView: View) : RecyclerView.ViewHolder(containerView)
 }

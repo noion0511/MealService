@@ -32,10 +32,11 @@ class NoticeAdapter(private val items: List<NoticeF.NoticeItem>, val context: Co
         holder.itemView.notice_number?.text = items[position].number
 
         if(items[position].number=="[공지]"){
-            holder.itemView.notice_title.setBackgroundColor(Color.parseColor("#a2d5f2"))
+            holder.itemView.notice_title.setBackgroundColor(Color.parseColor("#fddb3a"))
+            holder.itemView.notice_title.setTextColor(Color.parseColor("#000000"))
         }
         else{
-            holder.itemView.notice_title.setBackgroundColor(Color.WHITE)
+            holder.itemView.notice_title.setBackgroundColor(Color.parseColor("#FFFFFF"))
         }
         holder.itemView.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
