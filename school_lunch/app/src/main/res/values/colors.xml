@@ -7,23 +7,25 @@
     <color name="gray">#E0E0E0</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#D1D1D1</color>
+    <color name="yellow">#fddb3a</color>
 
-    <color name="mainColor1">#1C0099</color>
-    <color name="mainColor2">#0016D9</color>
-    <color name="mainColor3">#0A50C2</color>
-    <color name="mainColor4">#0090D9</color>
-    <color name="mainColor5">#00C3CF</color>
-    <color name="mainColor6">#CCE5FF</color>
-    <color name="mainColor7">#99CCFF</color>
+    <color name="pinkColor1">#fccbcb</color>
+    <color name="pinkColor2">#d9adad</color>
+    <color name="pinkColor3">#ad9d9d</color>
+    <color name="pinkColor4">#838383</color>
 
-    <color name="mainColor8">#faf3dd</color>
-    <color name="mainColor9">#c8d5b9</color>
-    <color name="mainColor10">#8fc0a9</color>
-    <color name="mainColor11">#68b0ab</color>
+    <color name="grinColor1">#065446</color>
+    <color name="grinColor2">#158467</color>
+    <color name="grinColor3">#bbd196</color>
+    <color name="grinColor4">#91d18b</color>
 
-    <color name="backColor1">#faf3dd</color>
-    <color name="backColor2">#faf3ed</color>
-    <color name="backColor3">#8fc0a9</color>
-    <color name="backColor4">#eebb4d</color>
+    <color name="blueColor1">#1C0099</color>
+    <color name="blueColor2">#07689f</color>
+    <color name="blueColor3">#40a8c4</color>
+    <color name="blueColor4">#a2d5f2</color>
 
+    <color name="greyColor1">#f1f3f8</color>
+    <color name="greyColor2">#d6e0f0</color>
+    <color name="greyColor3">#8d93ab</color>
+    <color name="greyColor4">#393b44</color>
 </resources>

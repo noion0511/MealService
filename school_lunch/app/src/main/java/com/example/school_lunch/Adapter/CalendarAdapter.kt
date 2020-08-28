@@ -35,8 +35,8 @@ class CalendarAdapter(private val scheduleList: List<AcademicCalendarF.Schedule>
     }
 
     override fun onBindViewHolder(holder: CalendarItemViewHolder, position: Int) {
-        if (position % BaseCalendar.DAYS_OF_WEEK == 0) holder.itemView.tv_date.setTextColor(Color.parseColor("#5512BB"))
-        else if(position % BaseCalendar.DAYS_OF_WEEK == 6) holder.itemView.tv_date.setTextColor(Color.parseColor("#1712BB"))
+        if (position % BaseCalendar.DAYS_OF_WEEK == 0) holder.itemView.tv_date.setTextColor(Color.parseColor("#1C0099"))
+        else if(position % BaseCalendar.DAYS_OF_WEEK == 6) holder.itemView.tv_date.setTextColor(Color.parseColor("#1C0099"))
         else holder.itemView.tv_date.setTextColor(Color.parseColor("#676d6e"))
 
         val day = baseCalendar.data[position]
@@ -52,7 +52,7 @@ class CalendarAdapter(private val scheduleList: List<AcademicCalendarF.Schedule>
 
 
         if(scheduleList?.find { it.day == day }?.holiday==""){
-            holder.itemView.tv_date.setTextColor(Color.parseColor("#00C3CF"))
+            holder.itemView.tv_date.setTextColor(Color.parseColor("#fddb3a"))
         }
 
         Log.d("Schedule size", "size of schedule = ${scheduleList?.size ?: 0}")

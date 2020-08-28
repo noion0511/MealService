@@ -6,19 +6,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.ClassScheduleF">
 
-        <LinearLayout
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            tools:ignore="UselessParent">
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/class_rv_list"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:itemCount="54"
                     tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     tools:listitem="@layout/class_item"
                     tools:orientation="vertical"
                     tools:scrollbars="vertical"
-                    tools:spanCount="6" />
-        </LinearLayout>
+                    tools:spanCount="6">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/class_plus_button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/yellow"
+                    android:text="수업 추가 및 수정"
+                    app:borderWidth="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.93"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.96" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

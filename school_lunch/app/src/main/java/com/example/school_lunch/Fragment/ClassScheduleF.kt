@@ -1,22 +1,16 @@
 package com.example.school_lunch.Fragment
 
-import android.annotation.SuppressLint
-import android.os.AsyncTask
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.school_lunch.Adapter.ClassAdapter
 import com.example.school_lunch.R
-import kotlinx.android.synthetic.main.fragment_class_schedule.*
-import org.jsoup.Jsoup
-import org.jsoup.nodes.Document
-import org.jsoup.select.Elements
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -51,6 +45,13 @@ class ClassScheduleF : Fragment() {
         class_rv_list = view.findViewById(R.id.class_rv_list)
         class_rv_list?.adapter = ClassAdapter()
         class_rv_list?.layoutManager = GridLayoutManager(view.context,6)
+
+        val classPlus = view.findViewById<FloatingActionButton>(R.id.class_plus_button)
+        classPlus.setOnClickListener {
+            val bottomSheetDialogFragment =
+                InfomationF()
+            bottomSheetDialogFragment.show(activity?.supportFragmentManager!!, bottomSheetDialogFragment.tag)
+        }
         return view
     }
 

@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.school_lunch.Fragment.MealServiceF
 import com.example.school_lunch.R
 import kotlinx.android.synthetic.main.meal_item.view.*
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 class MealAdapter(val items: List<MealServiceF.Item>, val context: Context?) : RecyclerView.Adapter<MealAdapter.ViewHolder>(){
 
@@ -30,6 +32,10 @@ class MealAdapter(val items: List<MealServiceF.Item>, val context: Context?) : R
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val current = LocalDateTime.now()
+        val formatter = DateTimeFormatter.ofPattern("MM")
+        val formatted = current.format(formatter)
+        holder.itemView.meal_month?.text = formatted
         holder.itemView.meal_title?.text = items.get(position).day.toString()
         holder.itemView.meal_contents?.text = items.get(position).meal
         val pos = holder.adapterPosition

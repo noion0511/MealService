@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/class_item"
+    android:id="@+id/plus_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -13,16 +13,16 @@
         android:orientation="horizontal">
 
         <View
-            android:id="@+id/classView1"
+            android:id="@+id/lineView1"
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="@color/gray" />
 
         <TextView
-            android:id="@+id/class_date"
+            android:id="@+id/plus_date"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="35dp"
             android:gravity="center_horizontal|center_vertical"
             android:text="a"
             android:textSize="15dp"
@@ -30,7 +30,7 @@
             android:fontFamily="@font/cafe24dangdanghae"/>
 
         <View
-            android:id="@+id/classView2"
+            android:id="@+id/lineView2"
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:layout_gravity="end"
@@ -38,7 +38,7 @@
     </LinearLayout>
 
     <View
-        android:id="@+id/classView3"
+        android:id="@+id/lineView3"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:layout_gravity="bottom"

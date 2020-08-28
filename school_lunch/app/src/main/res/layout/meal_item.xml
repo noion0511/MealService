@@ -10,12 +10,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
+        <TextView
+            android:id="@+id/meal_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:text="일"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/cafe24dangdanghae"/>
+
+        <TextView
+            android:id="@+id/meal_title_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingRight="5dp"
+            android:text="월"
+            android:textSize="20dp"
+            android:fontFamily="@font/cafe24dangdanghae"/>
 
         <TextView
             android:id="@+id/meal_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
             android:paddingTop="20dp"
             android:text="@string/calendar"
             android:textSize="20dp"

@@ -5,7 +5,5 @@
     <font
         android:font="@font/cafe24dangdanghae" />
     <font
-        android:font="@font/cafe24ssurround" />
-    <font
         android:font="@font/cafe24ohsquareair" />
 </font-family>
