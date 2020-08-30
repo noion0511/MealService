@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -39,7 +40,7 @@
                 android:text="@string/fg_cal_mon"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:textSize="22dp"
+                android:textSize="22sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:fontFamily="@font/cafe24dangdanghae"/>
 
@@ -49,7 +50,7 @@
                 android:layout_height="20dp"
                 android:layout_weight="1"
                 android:src="@drawable/right"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:gravity="center"
                 android:layout_gravity="center"/>
 
@@ -74,7 +75,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/sun"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/cafe24dangdanghae"/>
 
@@ -85,7 +86,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/mon"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/cafe24dangdanghae"/>
 
@@ -96,7 +97,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/tue"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/cafe24dangdanghae"/>
 
@@ -107,7 +108,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/wed"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/cafe24dangdanghae"/>
 
@@ -118,7 +119,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/thu"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/cafe24dangdanghae"/>
 
@@ -129,7 +130,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/fri"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/cafe24dangdanghae"/>
 
@@ -140,7 +141,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/sat"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/cafe24dangdanghae"/>
             </LinearLayout>

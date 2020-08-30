@@ -19,7 +19,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
             android:fontFamily="@font/cafe24dangdanghae"
-            android:hint="수업 이름" />
+            android:hint="@string/class_name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -60,8 +60,9 @@
             android:layout_weight="1"
             android:background="@color/blueColor3"
             android:fontFamily="@font/cafe24dangdanghae"
-            android:text="저장"
-            android:textSize="17sp" />
+            android:text="@string/save"
+            android:textSize="17sp"
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:id="@+id/button4"
@@ -74,7 +75,8 @@
             android:layout_weight="1"
             android:background="@color/blueColor2"
             android:fontFamily="@font/cafe24dangdanghae"
-            android:text="삭제"
-            android:textSize="17sp" />
+            android:text="@string/remove"
+            android:textSize="17sp"
+            tools:ignore="ButtonStyle" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
