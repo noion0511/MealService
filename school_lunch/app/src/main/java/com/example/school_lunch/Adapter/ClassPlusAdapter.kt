@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.school_lunch.DataBaseHandler
 import com.example.school_lunch.Fragment.ClassScheduleF
 import com.example.school_lunch.R
 import kotlinx.android.synthetic.main.plus_item.view.*
@@ -51,6 +52,7 @@ class ClassPlusAdapter : RecyclerView.Adapter<ClassPlusAdapter.ClassViewHolder>(
         }
         holder.itemView.setOnClickListener {
             holder.itemView.plus_item.setBackgroundColor(Color.parseColor("#ffc93c"))
+            holder.itemView.plus_date.setText(position)
         }
     }
 
