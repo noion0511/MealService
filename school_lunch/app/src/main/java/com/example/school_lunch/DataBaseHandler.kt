@@ -15,7 +15,7 @@ val COL_ID = "id"
 
 class DataBaseHandler(var context: Context?) :SQLiteOpenHelper(context, DATABASE_NAME, null, 1){
     override fun onCreate(db: SQLiteDatabase?) {
-        val createTable = "CREATE TABLE $TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_POSITION INTEGER,$COL_NAME VARCHAR(50))"
+        val createTable = "CREATE TABLE $TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_POSITION INTEGER,$COL_NAME VARCHAR(50))"
         db?.execSQL(createTable)
     }
 

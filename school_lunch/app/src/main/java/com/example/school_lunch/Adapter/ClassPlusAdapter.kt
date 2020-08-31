@@ -2,63 +2,87 @@ package com.example.school_lunch.Adapter
 
 import android.graphics.Color
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.school_lunch.DataBaseHandler
-import com.example.school_lunch.Fragment.ClassScheduleF
+import com.example.school_lunch.Fragment.InfomationF
 import com.example.school_lunch.R
 import kotlinx.android.synthetic.main.plus_item.view.*
 
 class ClassPlusAdapter : RecyclerView.Adapter<ClassPlusAdapter.ClassViewHolder>(){
-    var classItems: MutableList<ClassScheduleF.ClassData> = mutableListOf(
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData("월"),
-        ClassScheduleF.ClassData("화"), ClassScheduleF.ClassData("수"),
-        ClassScheduleF.ClassData("목"), ClassScheduleF.ClassData("금"),
-        ClassScheduleF.ClassData("1"), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData("2"), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData("3"), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData("4"), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData("5"), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData("6"), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData("7"), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData("8"), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData(""),
-        ClassScheduleF.ClassData(""), ClassScheduleF.ClassData("")
-    )
+    val selectedItemPosition = HashSet<InfomationF.Schedule>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, p1:Int) = ClassViewHolder(parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ClassViewHolder =
+        ClassViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.plus_item, parent, false), this)
 
-    override fun getItemCount(): Int = classItems.size
+    override fun getItemCount(): Int = 54
 
-    override fun onBindViewHolder(holder: ClassPlusAdapter.ClassViewHolder, position: Int) {
-        classItems[position].let{ item ->
-            with(holder) {
-                tvClass.text = item.content
+    override fun onBindViewHolder(holder: ClassViewHolder, position: Int) {
+        val xPos = position % 6
+        val yPos = position / 6
+
+        holder.xPos = xPos
+        holder.yPos = yPos
+        holder.tvClass.text = when {
+            yPos == 0 -> {
+                when(xPos) {
+                    1 -> "월"
+                    2 -> "화"
+                    3 -> "수"
+                    4 -> "목"
+                    5 -> "금"
+                    else -> ""
+                }
+            }
+            xPos == 0 -> {
+                when(yPos) {
+                    1 -> "1"
+                    2 -> "2"
+                    3 -> "3"
+                    4 -> "4"
+                    5 -> "5"
+                    6 -> "6"
+                    7 -> "7"
+                    8 -> "8"
+                    else -> ""
+                }
+            }
+            else -> {
+                ""
             }
         }
-        holder.itemView.setOnClickListener {
-            holder.itemView.plus_item.setBackgroundColor(Color.parseColor("#ffc93c"))
-            holder.itemView.plus_date.setText(position)
+        holder.tvClass.setBackgroundColor(if(selectedItemPosition.contains(InfomationF.Schedule(xPos, yPos))) Color.parseColor("#fddb3a") else Color.WHITE)
+    }
+
+    data class ClassViewHolder(val view: View, val adapter: ClassPlusAdapter): RecyclerView.ViewHolder(view) {
+        var xPos = 0
+        var yPos = 0
+        val tvClass: TextView = view.findViewById(R.id.plus_date)
+        init {
+            tvClass.setOnClickListener {
+                adapter.onItemClicked(xPos, yPos)
+            }
         }
     }
 
-    inner class ClassViewHolder(parent: ViewGroup): RecyclerView.ViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.plus_item, parent, false)) {
-        val tvClass: TextView = itemView.plus_date
+    private fun onItemClicked(xPos: Int, yPos: Int) {
+        val position = InfomationF.Schedule(xPos, yPos)
+        val recyclerViewPosition = yPos * 6 + xPos
+
+        if( xPos == 0 || yPos == 0) {
+            return
+        } else if(selectedItemPosition.contains(position)) {
+            selectedItemPosition.remove(position)
+        } else {
+            selectedItemPosition.add(position)
+        }
+
+        notifyItemChanged(recyclerViewPosition)
+    }
+
+    fun getSelectedSchedule(): Set<InfomationF.Schedule> {
+        return selectedItemPosition
     }
 }
+
