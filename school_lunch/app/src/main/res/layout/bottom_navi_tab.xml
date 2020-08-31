@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="150dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:baselineAligned="false">
     <RelativeLayout
         android:id="@+id/btn_navi_calendar_tab"
         android:layout_width="match_parent"
@@ -22,7 +23,8 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="12dp"
-            android:src="@drawable/selector_calendar_icon"/>
+            android:src="@drawable/selector_calendar_icon"
+            android:contentDescription="@string/calendar" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -42,7 +44,8 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="12dp"
-            android:src="@drawable/selector_class_icon" />
+            android:src="@drawable/selector_class_icon"
+            android:contentDescription="@string/schedule" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -63,7 +66,8 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="12dp"
-            android:src="@drawable/selector_meal_icon" />
+            android:src="@drawable/selector_meal_icon"
+            android:contentDescription="@string/meal" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -83,7 +87,8 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="12dp"
-            android:src="@drawable/selector_notice_icon" />
+            android:src="@drawable/selector_notice_icon"
+            android:contentDescription="@string/notice" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -103,6 +108,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="12dp"
-            android:src="@drawable/selector_setting_icon" />
+            android:src="@drawable/selector_setting_icon"
+            android:contentDescription="@string/setting" />
     </RelativeLayout>
 </LinearLayout>

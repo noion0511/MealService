@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/meal_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -9,25 +10,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:orientation="horizontal"
-        android:layout_marginLeft="10dp">
+        android:orientation="horizontal">
         <TextView
             android:id="@+id/meal_month"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:text="일"
-            android:textSize="20dp"
+            android:paddingStart="15dp"
+            android:text="@string/day"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:layout_gravity="bottom"
-            android:fontFamily="@font/cafe24dangdanghae"/>
+            android:fontFamily="@font/cafe24dangdanghae"
+            tools:ignore="RtlSymmetry" />
 
         <TextView
             android:id="@+id/meal_title_month"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:paddingRight="5dp"
-            android:text="월"
-            android:textSize="20dp"
+            android:text="@string/month"
+            android:textSize="20sp"
             android:layout_gravity="bottom"
             android:fontFamily="@font/cafe24dangdanghae"/>
 
@@ -35,8 +36,9 @@
             android:id="@+id/meal_title"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:text="@string/calendar"
-            android:textSize="20dp"
+            android:layout_marginStart="5dp"
+            android:text="@string/day"
+            android:textSize="20sp"
             android:layout_gravity="bottom"
             android:textStyle="bold"
             android:fontFamily="@font/cafe24dangdanghae"/>
@@ -45,8 +47,8 @@
             android:id="@+id/meal_title_day"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:text="일"
-            android:textSize="20dp"
+            android:text="@string/day"
+            android:textSize="20sp"
             android:layout_gravity="bottom"
             android:fontFamily="@font/cafe24dangdanghae"/>
 
@@ -60,8 +62,8 @@
         android:paddingTop="15dp"
         android:paddingRight="20dp"
         android:paddingBottom="20dp"
-        android:text="@string/calendar"
-        android:textSize="20dp"
+        android:text="@string/meal"
+        android:textSize="20sp"
         android:fontFamily="@font/cafe24ohsquareair"/>
 
     <View

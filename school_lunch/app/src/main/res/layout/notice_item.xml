@@ -19,7 +19,7 @@
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:text="1"
+            android:text="@string/notice_number"
             android:layout_gravity="center"
             android:gravity="center"
             android:fontFamily="@font/cafe24dangdanghae"/>
@@ -37,8 +37,8 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
-                android:text="청소년 도박문제에 대한 인식증진과 개선을 위한 공모전 안내"
-                android:textSize="20dp"
+                android:text="@string/notice_title"
+                android:textSize="20sp"
                 android:textColor="@color/grayColor4"
                 android:fontFamily="@font/cafe24ohsquareair"/>
 
@@ -58,9 +58,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:paddingBottom="10dp"
-                        android:text="작성자: "
+                        android:text="@string/notice_writer"
                         android:fontFamily="@font/cafe24ohsquareair"/>
 
                     <TextView
@@ -68,9 +68,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="left"
+                        android:gravity="start"
                         android:paddingBottom="10dp"
-                        android:text="이영옥"
+                        android:text="@string/notice_writer"
                         android:fontFamily="@font/cafe24dangdanghae"/>
                 </LinearLayout>
 
@@ -81,7 +81,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:paddingBottom="10dp"
-                    android:text="2020-08-21"
+                    android:text="@string/notice_day"
                     android:fontFamily="@font/cafe24dangdanghae"/>
             </LinearLayout>
         </LinearLayout>

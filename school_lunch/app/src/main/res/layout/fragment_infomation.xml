@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/classTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -14,12 +14,13 @@
         app:layout_constraintTop_toBottomOf="@+id/plus_rv_list">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/classTitle2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
             android:fontFamily="@font/cafe24dangdanghae"
-            android:hint="수업 이름" />
+            android:hint="@string/class_name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -47,10 +48,10 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/classTitle">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/saveBtn"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
@@ -60,11 +61,12 @@
             android:layout_weight="1"
             android:background="@color/blueColor3"
             android:fontFamily="@font/cafe24dangdanghae"
-            android:text="저장"
-            android:textSize="17sp" />
+            android:text="@string/save"
+            android:textSize="17sp"
+            tools:ignore="ButtonStyle" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/deleteBtn"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginStart="5dp"
@@ -74,7 +76,8 @@
             android:layout_weight="1"
             android:background="@color/blueColor2"
             android:fontFamily="@font/cafe24dangdanghae"
-            android:text="삭제"
-            android:textSize="17sp" />
+            android:text="@string/remove"
+            android:textSize="17sp"
+            tools:ignore="ButtonStyle" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
