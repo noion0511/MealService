@@ -8,15 +8,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:orientation="vertical"
         tools:ignore="UselessParent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical"
-            android:gravity="center">
+            android:layout_marginTop="10dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -30,54 +32,68 @@
                     android:id="@+id/fg_cal_pre"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:src="@drawable/left"
                     android:gravity="center"
-                    android:layout_gravity="center" />
+                    android:src="@drawable/left" />
 
                 <TextView
                     android:id="@+id/fg_cal_month"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="30dp"
                     android:layout_weight="1"
-                    android:text="@string/fg_cal_mon"
+                    android:fontFamily="@font/cafe24dangdanghae"
                     android:gravity="center"
-                    android:layout_gravity="center"
-                    android:textSize="22sp"
+                    android:text="@string/fg_cal_mon"
                     android:textColor="@color/colorPrimaryDark"
-                    android:fontFamily="@font/cafe24dangdanghae"/>
+                    android:textSize="22sp" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/fg_cal_next"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:src="@drawable/right"
-                    android:textSize="15sp"
                     android:gravity="center"
-                    android:layout_gravity="center"/>
+                    android:src="@drawable/right"
+                    android:textSize="15sp" />
             </LinearLayout>
 
-<!--            <View-->
-<!--                android:id="@+id/calendar_view"-->
-<!--                android:layout_width="130dp"-->
-<!--                android:layout_height="2dp"-->
-<!--                android:background="@color/grayColor3"-->
-<!--                android:layout_marginBottom="5dp"/>-->
+            <!--            <View-->
+            <!--                android:id="@+id/calendar_view"-->
+            <!--                android:layout_width="130dp"-->
+            <!--                android:layout_height="2dp"-->
+            <!--                android:background="@color/grayColor3"-->
+            <!--                android:layout_marginBottom="5dp"/>-->
 
         </LinearLayout>
+
+        <View
+            android:id="@+id/view425"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/gray"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="30dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:layout_marginBottom="20dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -86,95 +102,105 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/cafe24dangdanghae"
                     android:gravity="center"
                     android:text="@string/sun"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/cafe24dangdanghae"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/cafe24dangdanghae"
                     android:gravity="center"
                     android:text="@string/mon"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/cafe24dangdanghae"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/cafe24dangdanghae"
                     android:gravity="center"
                     android:text="@string/tue"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/cafe24dangdanghae"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/cafe24dangdanghae"
                     android:gravity="center"
                     android:text="@string/wed"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/cafe24dangdanghae"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/cafe24dangdanghae"
                     android:gravity="center"
                     android:text="@string/thu"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/cafe24dangdanghae"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/classTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/cafe24dangdanghae"
                     android:gravity="center"
                     android:text="@string/fri"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/cafe24dangdanghae"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/cafe24dangdanghae"
                     android:gravity="center"
                     android:text="@string/sat"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/cafe24dangdanghae"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
                 android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp">
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
                 <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/fg_cal_rv"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        tools:itemCount="42"
-                        tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                        tools:listitem="@layout/cal_item"
-                        tools:orientation="vertical"
-                        tools:scrollbars="vertical"
-                        tools:spanCount="7" />
+                    android:id="@+id/fg_cal_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:itemCount="42"
+                    tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:listitem="@layout/cal_item"
+                    tools:orientation="vertical"
+                    tools:scrollbars="vertical"
+                    tools:spanCount="7" />
+
+                <View
+                    android:id="@+id/view45"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

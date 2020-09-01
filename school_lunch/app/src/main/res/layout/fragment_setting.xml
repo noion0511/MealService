@@ -54,41 +54,41 @@
                 android:fontFamily="@font/cafe24dangdanghae"
                 android:textSize="20sp"/>
 
-            <View
-                android:id="@+id/view52"
-                android:layout_width="match_parent"
-                android:layout_height="30dp" />
+<!--            <View-->
+<!--                android:id="@+id/view52"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="30dp" />-->
 
-            <TextView
-                android:id="@+id/textView121"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="@string/inapp_payment"
-                android:textSize="22sp"
-                android:gravity="center"
-                android:fontFamily="@font/cafe24dangdanghae"/>
+<!--            <TextView-->
+<!--                android:id="@+id/textView121"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:text="@string/inapp_payment"-->
+<!--                android:textSize="22sp"-->
+<!--                android:gravity="center"-->
+<!--                android:fontFamily="@font/cafe24dangdanghae"/>-->
 
-            <View
-                android:id="@+id/view41"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/gray"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"/>
+<!--            <View-->
+<!--                android:id="@+id/view41"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/gray"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_marginLeft="10dp"/>-->
 
-            <Button
-                android:id="@+id/button10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/remove_advertising"
-                android:layout_marginRight="40dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/white"
-                android:textColor="@color/grayColor4"
-                android:fontFamily="@font/cafe24dangdanghae"
-                android:textSize="20sp"/>
+<!--            <Button-->
+<!--                android:id="@+id/button10"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/remove_advertising"-->
+<!--                android:layout_marginRight="40dp"-->
+<!--                android:layout_marginLeft="40dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@color/white"-->
+<!--                android:textColor="@color/grayColor4"-->
+<!--                android:fontFamily="@font/cafe24dangdanghae"-->
+<!--                android:textSize="20sp"/>-->
 
             <View
                 android:id="@+id/view51"
