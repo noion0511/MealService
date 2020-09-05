@@ -113,8 +113,8 @@ class MealServiceF : Fragment() {
         } else {
             0
         }
-        val to = if (nowItemIndex + 2 < result.size) {
-            nowItemIndex + 2
+        val to = if (nowItemIndex + 3 < result.size) {
+            nowItemIndex + 3
         } else {
             result.size
         }

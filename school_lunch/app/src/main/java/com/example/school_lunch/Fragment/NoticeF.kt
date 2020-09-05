@@ -66,7 +66,7 @@ class NoticeF : Fragment() {
                 val urlCode = numberList[1].value
                 val realUrl = "http://jungang.jje.hs.kr/jungang-h/0201/board/16395/$urlCode"
                 if(number==""){
-                    NoticeItem("[공지]",title,writer,day,realUrl)
+                    NoticeItem(" [공지] ",title,writer,day,realUrl)
                 }
                 else{
                     NoticeItem(number,title,writer,day,realUrl)
