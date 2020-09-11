@@ -20,7 +20,7 @@ class NoticeF : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    val Weburl = "http://jungang.jje.hs.kr/jungang-h/0201/board/16395"
+    val web_url = "http://jungang.jje.hs.kr/jungang-h/0201/board/16395"
     var rv : RecyclerView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,7 +47,7 @@ class NoticeF : Fragment() {
     @SuppressLint("StaticFieldLeak")
     inner class NoticeAsyncTask: AsyncTask<String, String, List<NoticeItem>>(){
         override fun doInBackground(vararg params: String?): List<NoticeItem> {
-            val doc = Jsoup.connect("$Weburl").get()
+            val doc = Jsoup.connect(web_url).get()
             val tables = doc.select("table.wb")
             val elts = tables.select("tr")
 

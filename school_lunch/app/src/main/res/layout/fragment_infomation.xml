@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/gray">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/plus_rv_list"
@@ -12,6 +13,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:choiceMode="multipleChoice"
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/classTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -21,22 +23,23 @@
         tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         tools:listitem="@layout/plus_item"
         tools:orientation="vertical"
-        tools:scrollbars="vertical" />
+        tools:scrollbars="vertical"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/classTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/classTitle2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:fontFamily="@font/cafe24dangdanghae"
             android:hint="@string/class_name" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -46,6 +49,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -54,7 +60,7 @@
             android:id="@+id/saveBtn"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="10dp"
@@ -71,7 +77,7 @@
             android:layout_height="40dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="5dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="@color/blueColor3"

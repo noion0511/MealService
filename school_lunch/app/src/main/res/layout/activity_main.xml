@@ -25,7 +25,7 @@
         android:layout_height="1dp"
         android:background="@color/gray2"
         android:elevation="0.5dp"
-        app:layout_constraintEnd_toEndOf="@+id/vp_ac_main_frag_pager"
+        app:layout_constraintEnd_toEndOf="@id/overlay_layout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
@@ -43,16 +43,21 @@
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/vp_ac_main_frag_pager"
+    <FrameLayout
+        android:id="@+id/overlay_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/main_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
-    </androidx.viewpager.widget.ViewPager>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_ac_main_frag_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </androidx.viewpager.widget.ViewPager>
+    </FrameLayout>
 
     <View
         android:id="@+id/mealItemView1"
@@ -60,7 +65,7 @@
         android:layout_height="1dp"
         android:background="@color/gray2"
         app:layout_constraintBottom_toTopOf="@+id/main_menu"
-        app:layout_constraintEnd_toEndOf="@+id/vp_ac_main_frag_pager"
+        app:layout_constraintEnd_toEndOf="@id/overlay_layout"
         app:layout_constraintStart_toStartOf="parent"
         android:elevation="0.5dp"/>
 

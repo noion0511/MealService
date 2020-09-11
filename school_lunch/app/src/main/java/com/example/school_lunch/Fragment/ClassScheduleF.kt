@@ -10,16 +10,20 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.school_lunch.Adapter.ClassAdapter
 import com.example.school_lunch.R
+import com.example.school_lunch.Room.CSDB
+import com.example.school_lunch.Room.ClassSchedule
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 class ClassScheduleF : Fragment() {
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
     var class_rv_list : RecyclerView? = null
+
+    private var csdb : CSDB? = null
+    private var csList = listOf<ClassSchedule>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,9 +45,11 @@ class ClassScheduleF : Fragment() {
 
         val classPlus = view.findViewById<FloatingActionButton>(R.id.class_plus_button)
         classPlus.setOnClickListener {
-            val bottomSheetDialogFragment =
-                InfomationF()
-            bottomSheetDialogFragment.show(activity?.supportFragmentManager!!, bottomSheetDialogFragment.tag)
+            val fragmentManager = activity?.supportFragmentManager ?: throw Exception("Can't get fragment manager")
+            val bottomSheetDialogFragment = InfomationF()
+            val transaction = fragmentManager.beginTransaction();
+            transaction.add(R.id.overlay_layout, bottomSheetDialogFragment)
+            transaction.commit()
         }
         return view
     }
