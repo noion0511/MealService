@@ -31,7 +31,7 @@ class NoticeAdapter(private val items: List<NoticeF.NoticeItem>, val context: Co
         holder.itemView.notice_day?.text = items[position].day
         holder.itemView.notice_number?.text = items[position].number
 
-        if(items[position].number==" [공지] "){
+        if(items[position].number=="공 지"){
             holder.itemView.notice_number.setBackgroundColor(Color.parseColor("#fddb3a"))
         }
         else{

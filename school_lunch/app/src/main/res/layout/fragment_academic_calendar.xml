@@ -35,7 +35,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:src="@drawable/left"
-                    android:tint="@color/blueColor3" />
+                    android:tint="@color/blueColor2" />
 
                 <TextView
                     android:id="@+id/fg_cal_month"
@@ -49,7 +49,7 @@
                     android:gravity="center"
                     android:text="@string/fg_cal_mon"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="22sp" />
+                    android:textSize="21sp" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/fg_cal_next"
@@ -60,7 +60,7 @@
                     android:gravity="center"
                     android:src="@drawable/right"
                     android:textSize="15sp"
-                    android:tint="@color/blueColor3"/>
+                    android:tint="@color/blueColor2"/>
             </LinearLayout>
 
             <!--            <View-->
@@ -80,7 +80,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="5dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -96,7 +96,8 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="@color/blueColor2">
 
                 <TextView
                     android:id="@+id/textView4"
@@ -107,7 +108,7 @@
                     android:gravity="center"
                     android:text="@string/sun"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:id="@+id/textView5"
@@ -118,7 +119,7 @@
                     android:gravity="center"
                     android:text="@string/mon"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:id="@+id/textView6"
@@ -129,7 +130,7 @@
                     android:gravity="center"
                     android:text="@string/tue"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:id="@+id/textView7"
@@ -140,7 +141,7 @@
                     android:gravity="center"
                     android:text="@string/wed"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:id="@+id/textView8"
@@ -151,7 +152,7 @@
                     android:gravity="center"
                     android:text="@string/thu"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:id="@+id/classTime"
@@ -162,7 +163,7 @@
                     android:gravity="center"
                     android:text="@string/fri"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:id="@+id/textView10"
@@ -173,7 +174,7 @@
                     android:gravity="center"
                     android:text="@string/sat"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/white"/>
             </LinearLayout>
 
             <LinearLayout

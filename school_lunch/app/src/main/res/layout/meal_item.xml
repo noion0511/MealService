@@ -10,14 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:orientation="horizontal"
-        android:layout_marginLeft="10dp">
+        android:layout_marginStart="20dp">
         <TextView
             android:id="@+id/meal_month"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:text="일"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            android:text="@string/sun"
+            android:textSize="20sp"
             android:layout_gravity="bottom"
             android:fontFamily="@font/cafe24dangdanghae"/>
 
@@ -26,8 +25,8 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:paddingRight="5dp"
-            android:text="월"
-            android:textSize="20dp"
+            android:text="@string/mon"
+            android:textSize="20sp"
             android:layout_gravity="bottom"
             android:fontFamily="@font/cafe24dangdanghae"/>
 
@@ -36,17 +35,16 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:text="@string/calendar"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:layout_gravity="bottom"
-            android:textStyle="bold"
             android:fontFamily="@font/cafe24dangdanghae"/>
 
         <TextView
             android:id="@+id/meal_title_day"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:text="일"
-            android:textSize="20dp"
+            android:text="@string/sun"
+            android:textSize="20sp"
             android:layout_gravity="bottom"
             android:fontFamily="@font/cafe24dangdanghae"/>
 
@@ -57,12 +55,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingLeft="20dp"
-        android:paddingTop="15dp"
+        android:paddingTop="10dp"
         android:paddingRight="20dp"
         android:paddingBottom="20dp"
         android:text="@string/calendar"
-        android:textSize="20dp"
-        android:fontFamily="@font/cafe24ohsquareair"/>
+        android:fontFamily="@font/cafe24ohsquareair"
+        android:letterSpacing="0.05"
+        android:textSize="18sp"/>
 
     <View
         android:id="@+id/mealItemView1"
