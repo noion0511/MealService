@@ -40,6 +40,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:fontFamily="@font/cafe24danjunghae"
+        android:letterSpacing="0.05"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
