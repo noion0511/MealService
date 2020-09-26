@@ -122,7 +122,7 @@
                 android:layout_marginRight="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/yellow"
+                android:background="@color/white"
                 android:fontFamily="@font/cafe24ohsquareair"
                 android:letterSpacing="0.05"
                 android:textColor="@color/grayColor4"
