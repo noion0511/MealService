@@ -39,7 +39,7 @@ class CalendarAdapter(private val baseCalendar: BaseCalendar, private val schedu
         }
 
         if(scheduleList?.find { it.day == day }?.holiday==""){
-            holder.itemView.tv_date.setBackgroundColor(Color.parseColor("#f8b400"))
+            holder.itemView.tv_date.setBackgroundColor(Color.parseColor("#fddb3a"))
             holder.itemView.tv_date.setTextColor(Color.parseColor("#393b44"))
         }
 
