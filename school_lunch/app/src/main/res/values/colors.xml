@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#1C0099</color>
+    <color name="colorAccent">#004445</color>
 
     <color name="gray">#EFEFEF</color>
     <color name="white">#FFFFFF</color>
@@ -11,28 +11,19 @@
     <color name="yellow">#fddb3a</color>
     <color name="yellow2">#ffdf91</color>
 
-    <color name="pinkColor1">#fccbcb</color>
-    <color name="pinkColor2">#d9adad</color>
-    <color name="pinkColor3">#ad9d9d</color>
-    <color name="pinkColor4">#838383</color>
-
-    <color name="grinColor1">#065446</color>
-    <color name="grinColor2">#158467</color>
-    <color name="grinColor3">#bbd196</color>
-    <color name="grinColor4">#91d18b</color>
-
     <color name="blueColor1">#1C0099</color>
     <color name="blueColor2">#07689f</color>
     <color name="blueColor3">#40a8c4</color>
-    <color name="blueColor4">#a2d5f2</color>
+    <color name="blueColor4">#8fcfd1</color>
 
-    <color name="blueColor5">#8fcfd1</color>
-    <color name="blueColor6">#7fdbda</color>
-    <color name="blueColor7">#1dd3bd</color>
-    <color name="blueColor8">#05dfd7</color>
-
-    <color name="grayColor1">#f1f3f8</color>
+    <color name="grayColor7">#f1f3f8</color>
     <color name="grayColor2">#d6e0f0</color>
     <color name="grayColor3">#8d93ab</color>
     <color name="grayColor4">#393b44</color>
+
+
+    <color name="AppColor1">#faf5e4</color>
+    <color name="AppColor2">#004445</color>
+    <color name="AppColor3">#2c786c</color>
+    <color name="AppColor4">#fddb3a</color>
 </resources>

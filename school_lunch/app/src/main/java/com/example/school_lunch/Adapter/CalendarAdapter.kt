@@ -24,8 +24,8 @@ class CalendarAdapter(private val baseCalendar: BaseCalendar, private val schedu
     }
 
     override fun onBindViewHolder(holder: CalendarItemViewHolder, position: Int) {
-        if (position % BaseCalendar.DAYS_OF_WEEK == 0) holder.itemView.tv_date.setTextColor(Color.parseColor("#1C0099"))
-        else if(position % BaseCalendar.DAYS_OF_WEEK == 6) holder.itemView.tv_date.setTextColor(Color.parseColor("#1C0099"))
+        if (position % BaseCalendar.DAYS_OF_WEEK == 0) holder.itemView.tv_date.setTextColor(Color.parseColor("#004445"))
+        else if(position % BaseCalendar.DAYS_OF_WEEK == 6) holder.itemView.tv_date.setTextColor(Color.parseColor("#004445"))
         else holder.itemView.tv_date.setTextColor(Color.parseColor("#676d6e"))
 
         val day = baseCalendar.data[position]
@@ -34,7 +34,7 @@ class CalendarAdapter(private val baseCalendar: BaseCalendar, private val schedu
         holder.itemView.academicSchedule.text = scheduleList?.find { schedule -> schedule.day == day }?.schedule ?: ""
 
         if(holder.itemView.academicSchedule.text != "") {
-            holder.itemView.tv_date.setBackgroundColor(Color.parseColor("#1C0099"))
+            holder.itemView.tv_date.setBackgroundColor(Color.parseColor("#2c786c"))
             holder.itemView.tv_date.setTextColor(Color.parseColor("#FFFFFF"))
         }
 

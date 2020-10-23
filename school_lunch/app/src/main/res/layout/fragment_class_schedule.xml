@@ -9,8 +9,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:ignore="UselessParent">
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent"
+            android:background="@drawable/rectangle_background"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/class_rv_list"
@@ -32,7 +37,7 @@
                     android:id="@+id/class_plus_button"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
-                    android:backgroundTint="@color/yellow"
+                    android:backgroundTint="@color/AppColor4"
                     android:text="수업 추가 및 수정"
                     android:src="@drawable/plus2"
                     app:borderWidth="0dp"
