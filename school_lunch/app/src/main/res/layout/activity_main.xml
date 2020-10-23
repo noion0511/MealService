@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/AppColor1">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -19,15 +20,15 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <View
-        android:id="@+id/mealItemView11"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="@color/gray2"
-        android:elevation="0.5dp"
-        app:layout_constraintEnd_toEndOf="@id/overlay_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+<!--    <View-->
+<!--        android:id="@+id/mealItemView11"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/gray2"-->
+<!--        android:elevation="0.5dp"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/overlay_layout"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/toolbar" />-->
 
     <TextView
         android:id="@+id/set_date"
@@ -36,7 +37,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:text="@string/calendar"
-        android:textColor="@color/blueColor1"
+        android:textColor="@color/AppColor3"
         android:textSize="20sp"
         android:textStyle="bold"
         android:fontFamily="@font/cafe24danjunghae"
@@ -60,15 +61,15 @@
         </androidx.viewpager.widget.ViewPager>
     </FrameLayout>
 
-    <View
-        android:id="@+id/mealItemView1"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="@color/gray2"
-        app:layout_constraintBottom_toTopOf="@+id/main_menu"
-        app:layout_constraintEnd_toEndOf="@id/overlay_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        android:elevation="0.5dp"/>
+<!--    <View-->
+<!--        android:id="@+id/mealItemView1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/blueColor1"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/main_menu"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/overlay_layout"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:elevation="0.5dp"/>-->
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/main_menu"

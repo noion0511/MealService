@@ -17,29 +17,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <View
-                android:id="@+id/view6"
-                android:layout_width="match_parent"
-                android:layout_height="5dp" />
-
-<!--            <TextView-->
-<!--                android:id="@+id/textView122"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="5dp"-->
-<!--                android:text="@string/widget_setting"-->
-<!--                android:textSize="18sp"-->
-<!--                android:gravity="center"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:fontFamily="@font/cafe24dangdanghae"/>-->
-
-<!--            <View-->
-<!--                android:id="@+id/view42"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="1dp"-->
-<!--                android:background="@color/gray"-->
-<!--                android:layout_marginRight="10dp"-->
-<!--                android:layout_marginLeft="10dp"/>-->
 
 <!--            <Button-->
 <!--                android:id="@+id/button22"-->
@@ -100,29 +77,32 @@
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grayColor4"
                 android:text="@string/opinion_evaluation"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:fontFamily="@font/cafe24dangdanghae"/>
+                android:textSize="15sp"
+                android:gravity="start"
+                android:fontFamily="@font/cafe24ohsquareair"/>
 
-            <View
-                android:id="@+id/view4"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/gray"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"/>
+<!--            <View-->
+<!--                android:id="@+id/view4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/gray"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_marginLeft="10dp"/>-->
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:text="@string/opinion"
                 android:layout_marginRight="40dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/white"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rectangle_background"
                 android:fontFamily="@font/cafe24ohsquareair"
                 android:letterSpacing="0.05"
                 android:textColor="@color/grayColor4"
@@ -131,14 +111,13 @@
             <Button
                 android:id="@+id/button23"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:text="@string/evaluation"
                 android:layout_marginRight="40dp"
                 android:layout_marginLeft="40dp"
                 android:fontFamily="@font/cafe24ohsquareair"
                 android:letterSpacing="0.05"
-                android:layout_marginTop="10dp"
-                android:background="@color/white"
+                android:background="@drawable/rectangle_background"
                 android:textColor="@color/grayColor4"
                 android:textSize="18sp"/>
 
@@ -151,38 +130,34 @@
                 android:id="@+id/text123"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grayColor4"
                 android:text="@string/licenses"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:fontFamily="@font/cafe24dangdanghae"/>
+                android:textSize="15sp"
+                android:gravity="start"
+                android:fontFamily="@font/cafe24ohsquareair"/>
 
-            <View
-                android:id="@+id/view4245"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/gray"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"/>
 
             <Button
                 android:id="@+id/button837"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/license"
+                android:layout_height="60dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rectangle_background"
                 android:fontFamily="@font/cafe24ohsquareair"
                 android:letterSpacing="0.05"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/white"
+                android:text="@string/license"
                 android:textColor="@color/grayColor4"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
-            <View
-                android:id="@+id/view66"
-                android:layout_width="match_parent"
-                android:layout_height="30dp" />
+<!--            <View-->
+<!--                android:id="@+id/view66"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="30dp" />-->
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
