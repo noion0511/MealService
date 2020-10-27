@@ -12,7 +12,10 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.school_lunch.Fragment.MealServiceF
 import com.example.school_lunch.R
+import kotlinx.android.synthetic.main.fragment_meal_service.view.*
 import kotlinx.android.synthetic.main.meal_item.view.*
+import kotlinx.android.synthetic.main.meal_item.view.lunch
+import kotlinx.android.synthetic.main.meal_item.view.lunch_contents
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -37,7 +40,7 @@ class MealAdapter(val items: List<MealServiceF.Item>, val context: Context?) : R
         val formatted = current.format(formatter)
         holder.itemView.meal_month?.text = formatted
         holder.itemView.meal_title?.text = items.get(position).day.toString()
-        holder.itemView.meal_contents?.text = items.get(position).meal
+        holder.itemView.lunch_contents?.text = items.get(position).meal
         val pos = holder.adapterPosition
         if(pos != RecyclerView.NO_POSITION) {
             if(pos == 2){
