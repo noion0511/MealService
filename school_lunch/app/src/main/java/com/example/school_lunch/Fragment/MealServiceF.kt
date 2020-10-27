@@ -50,7 +50,7 @@ class MealServiceF : Fragment() {
         val view = inflater.inflate(R.layout.fragment_meal_service, container, false)
         rv  = view.findViewById(R.id.meal_rv_list)
         rv?.layoutManager = LinearLayoutManager(view.context, RecyclerView.VERTICAL, false)
-        rv?.scrollToPosition(1)
+        rv?.scrollToPosition(2)
 
         MealAsyncTask().execute(Weburl)
 
@@ -86,7 +86,7 @@ class MealServiceF : Fragment() {
                 val findDayRegex = Regex("\\d+")
                 val day = findDayRegex.find(elem.text())?.value?.toInt() ?: -1
                 if(mealElemnt.size == 0) {
-                    Item(day, "급식 없는 날!")
+                    Item(day, "급식 없음")
                 } else {
                     Item(day, mealElemnt.text())
                 }
@@ -108,7 +108,7 @@ class MealServiceF : Fragment() {
             item.day == now.date
         } ?: throw Exception("there is no now day item")
         val nowItemIndex = result.indexOf(nowItem)
-        val from = if (nowItemIndex - 2 > 0) {
+        val from = if (nowItemIndex - 2> 0) {
             nowItemIndex - 2
         } else {
             0

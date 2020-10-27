@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/rectangle_background"
-    android:layout_marginBottom="10dp"
+    android:layout_marginBottom="20dp"
     android:layout_marginRight="10dp"
     android:layout_marginLeft="10dp">
 
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:orientation="horizontal"
-        android:layout_marginStart="20dp">
+        android:gravity="center">
         <TextView
             android:id="@+id/meal_month"
             android:layout_width="wrap_content"
@@ -55,7 +55,69 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/meal_contents"
+        android:id="@+id/breakfast"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/cafe24dangdanghae"
+        android:text="아침"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/breakfast_contents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/calendar"
+        android:fontFamily="@font/cafe24ohsquareair"
+        android:letterSpacing="0.05"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/lunch"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/cafe24dangdanghae"
+        android:text="점심"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/lunch_contents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/calendar"
+        android:fontFamily="@font/cafe24ohsquareair"
+        android:letterSpacing="0.05"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/dinner"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/cafe24dangdanghae"
+        android:text="저녁"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/dinner_contents"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingLeft="20dp"
