@@ -6,13 +6,17 @@ import androidx.room.Insert
 import androidx.room.Query
 
 @Dao
-interface CSDao {
-    @Query("SELECT * FROM cstable")
+interface ClassTableDao {
+    @Query("SELECT * FROM classTable")
     fun getAll(): List<ClassSchedule>
 
     @Insert
-    fun insert(vararg cSchedule: ClassSchedule)
+    fun insert(vararg ClassSchedule: ClassSchedule)
 
     @Delete
-    fun delete(cSchedule: ClassSchedule)
+    fun delete(ClassSchedule: ClassSchedule)
+
+    @Delete
+    fun deleteAll()
+
 }

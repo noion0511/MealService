@@ -32,9 +32,15 @@
     <string name="class9">9</string>
     <string name="class10">10</string>
 
+    <string name="days">요일</string>
+    <string name="periods">교시</string>
+    <string name="className">이름</string>
+    <string name="classNameHint">수업의 이름을 적어주세요.</string>
+
     <string name="class_name">수업 이름</string>
     <string name="save">저장</string>
-    <string name="remove">삭제</string>
+    <string name="cancel">취소</string>
+    <string name="insert">일정 추가</string>
 
     <!-- meal_service strings -->
     <string name="month">월</string>

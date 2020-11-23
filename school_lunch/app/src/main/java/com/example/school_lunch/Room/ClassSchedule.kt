@@ -1,15 +1,14 @@
 package com.example.school_lunch.Room
 
-import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.school_lunch.Fragment.InfomationF
 
-@Entity(tableName = "cstable")
+@Entity(tableName = "classTable")
 data class ClassSchedule(
-    @PrimaryKey(autoGenerate = true) var id: Int,
-    var position: Int,
-    var className: String
+    @PrimaryKey(autoGenerate = true) var id: Int?,
+    var days: String,
+    var periods: String,
+    var name: String
 ) {
-    constructor() : this(0, 0,"")
+    constructor() : this(null,"","","")
 }

@@ -6,14 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewParent
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.school_lunch.Fragment.ClassScheduleF
 import com.example.school_lunch.R
+import com.example.school_lunch.Room.ClassSchedule
 import kotlinx.android.synthetic.main.class_item.view.*
 
 
-class ClassAdapter : RecyclerView.Adapter<ClassAdapter.ClassViewHolder>(){
+class ClassAdapter(val context: Context, val schedule : List<ClassSchedule>) : RecyclerView.Adapter<ClassAdapter.Holder>(){
     var classItems: MutableList<ClassScheduleF.ClassData> = mutableListOf(
         ClassScheduleF.ClassData(""),ClassScheduleF.ClassData("월"),
         ClassScheduleF.ClassData("화"),ClassScheduleF.ClassData("수"),
@@ -44,11 +46,10 @@ class ClassAdapter : RecyclerView.Adapter<ClassAdapter.ClassViewHolder>(){
         ClassScheduleF.ClassData(""),ClassScheduleF.ClassData("")
     )
 
-    override fun onCreateViewHolder(parent: ViewGroup, p1:Int) = ClassViewHolder(parent)
-
     override fun getItemCount(): Int = classItems.size
 
-    override fun onBindViewHolder(holder: ClassAdapter.ClassViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: Holder, position: Int) {
+        holder.bind(schedule[position])
         /*if (position % 6 == 0) {
             holder.itemView.class_item.setBackgroundColor(Color.parseColor("#CCE5FF"))
             holder.itemView.classView1.visibility = View.INVISIBLE
@@ -63,15 +64,23 @@ class ClassAdapter : RecyclerView.Adapter<ClassAdapter.ClassViewHolder>(){
                 holder.itemView.classView3.visibility = View.INVISIBLE
             }
         }*/
-        classItems[position].let{ item ->
-            with(holder) {
-                tvClass.text = item.content
-            }
-        }
+//        classItems[position].let{ item ->
+//            with(holder) {
+//                tvClass.text = item.content
+//            }
+//        }
     }
 
-    inner class ClassViewHolder(parent: ViewGroup): RecyclerView.ViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.class_item, parent, false)) {
-        val tvClass = itemView.class_date
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
+        val view = LayoutInflater.from(context).inflate(R.layout.class_item, parent, false)
+        return Holder(view)
+    }
+
+    inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val nameTv = itemView.findViewById<TextView>(R.id.class_item)
+
+        fun bind(classSchedule: ClassSchedule) {
+            nameTv?.text = classSchedule.name
+        }
     }
 }

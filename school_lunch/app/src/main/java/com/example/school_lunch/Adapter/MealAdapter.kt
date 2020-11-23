@@ -14,7 +14,6 @@ import com.example.school_lunch.Fragment.MealServiceF
 import com.example.school_lunch.R
 import kotlinx.android.synthetic.main.fragment_meal_service.view.*
 import kotlinx.android.synthetic.main.meal_item.view.*
-import kotlinx.android.synthetic.main.meal_item.view.lunch
 import kotlinx.android.synthetic.main.meal_item.view.lunch_contents
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
