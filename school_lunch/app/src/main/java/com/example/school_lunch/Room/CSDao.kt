@@ -16,7 +16,4 @@ interface ClassTableDao {
     @Delete
     fun delete(ClassSchedule: ClassSchedule)
 
-    @Delete
-    fun deleteAll()
-
 }

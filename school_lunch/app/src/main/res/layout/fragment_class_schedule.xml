@@ -37,7 +37,6 @@
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:backgroundTint="@color/AppColor4"
-                    android:text="수업 추가 및 수정"
                     android:src="@drawable/plus2"
                     app:borderWidth="0dp"
                     app:layout_constraintBottom_toBottomOf="parent"

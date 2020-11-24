@@ -30,6 +30,36 @@ class ClassScheduleF : Fragment() {
     private var ctList = listOf<ClassSchedule>()
     lateinit var mAdapter : ClassAdapter
 
+    private var classItems: List<ClassData> = mutableListOf(
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData("월"),
+        ClassScheduleF.ClassData("화"),ClassScheduleF.ClassData("수"),
+        ClassScheduleF.ClassData("목"),ClassScheduleF.ClassData("금"),
+        ClassScheduleF.ClassData("1"),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData("2"),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData("3"),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData("4"),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData("5"),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData("6"),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData("7"),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData("8"),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
+        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData("")
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -52,7 +82,7 @@ class ClassScheduleF : Fragment() {
             //데이터를 읽고 쓸때 사용?
             try {
                 ctList = ctdb?.classTableDao()?.getAll()!!
-                mAdapter = ClassAdapter(view.context, ctList)
+                mAdapter = ClassAdapter(view.context, classItems)
                 mAdapter.notifyDataSetChanged()
 
                 class_rv_list?.adapter = mAdapter

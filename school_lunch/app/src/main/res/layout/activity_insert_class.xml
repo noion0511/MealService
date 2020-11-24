@@ -110,7 +110,7 @@
                     android:gravity="center"/>
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName"
+                    android:id="@+id/addName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
