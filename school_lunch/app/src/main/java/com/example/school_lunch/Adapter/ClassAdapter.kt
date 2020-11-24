@@ -15,7 +15,7 @@ import com.example.school_lunch.Room.ClassSchedule
 import kotlinx.android.synthetic.main.class_item.view.*
 
 
-class ClassAdapter(val context: Context, val schedule : List<ClassScheduleF.ClassData>) : RecyclerView.Adapter<ClassAdapter.Holder>() {
+class ClassAdapter(val context: Context, val schedule : List<ClassSchedule>) : RecyclerView.Adapter<ClassAdapter.Holder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -48,7 +48,7 @@ class ClassAdapter(val context: Context, val schedule : List<ClassScheduleF.Clas
     inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTv = itemView.findViewById<TextView>(R.id.class_name)
 
-        fun bind(classSchedule: ClassScheduleF.ClassData) {
+        fun bind(classSchedule: ClassSchedule) {
             nameTv?.text = classSchedule.name
         }
     }

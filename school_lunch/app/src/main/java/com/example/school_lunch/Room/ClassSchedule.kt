@@ -6,9 +6,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "classTable")
 data class ClassSchedule(
     @PrimaryKey(autoGenerate = true) var id: Int?,
-    var days: String,
-    var periods: String,
     var name: String
 ) {
-    constructor() : this(null,"","","")
+    constructor() : this(null,"")
 }
