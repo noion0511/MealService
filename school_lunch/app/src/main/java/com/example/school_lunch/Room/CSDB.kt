@@ -5,10 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [ClassSchedule::class], version = 1)
+@Database(entities = [ClassSchedule::class], version = 3)
 abstract class ClassTableDB : RoomDatabase() {
     abstract fun classTableDao(): ClassTableDao
-
     companion object {
         private var INSTANCE: ClassTableDB? = null
 
@@ -28,3 +27,4 @@ abstract class ClassTableDB : RoomDatabase() {
         }
     }
 }
+

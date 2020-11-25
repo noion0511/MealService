@@ -1,9 +1,6 @@
 package com.example.school_lunch.Room
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface ClassTableDao {
@@ -13,7 +10,9 @@ interface ClassTableDao {
     @Insert
     fun insert(vararg ClassSchedule: ClassSchedule)
 
+    @Update
+    fun update(vararg ClassSchedule: ClassSchedule)
+
     @Delete
     fun delete(ClassSchedule: ClassSchedule)
-
 }

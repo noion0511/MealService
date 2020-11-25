@@ -30,48 +30,18 @@ class ClassScheduleF : Fragment() {
     private var ctList = listOf<ClassSchedule>()
     lateinit var mAdapter : ClassAdapter
 
-//    private var classItems: List<ClassData> = mutableListOf(
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData("월"),
-//        ClassScheduleF.ClassData("화"),ClassScheduleF.ClassData("수"),
-//        ClassScheduleF.ClassData("목"),ClassScheduleF.ClassData("금"),
-//        ClassScheduleF.ClassData("1"),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData("2"),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData("3"),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData("4"),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData("5"),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData("6"),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData("7"),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData("8"),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData(""),
-//        ClassScheduleF.ClassData(""),ClassScheduleF.ClassData("")
-//    )
-
     private var classItems: List<ClassSchedule> = listOf(
-        ClassSchedule(0,""), ClassSchedule(1,""), ClassSchedule(2,""), ClassSchedule(3,""), ClassSchedule(4,""),
-        ClassSchedule(5,""), ClassSchedule(6,""), ClassSchedule(7,""), ClassSchedule(8,""), ClassSchedule(9,""),
-        ClassSchedule(10,""), ClassSchedule(11,""), ClassSchedule(12,""), ClassSchedule(13,""), ClassSchedule(14,""),
-        ClassSchedule(15,""), ClassSchedule(16,""), ClassSchedule(17,""), ClassSchedule(18,""), ClassSchedule(19,""),
-        ClassSchedule(20,""), ClassSchedule(21,""), ClassSchedule(22,""), ClassSchedule(23,""), ClassSchedule(24,""),
+        ClassSchedule(0,""), ClassSchedule(1,"월"), ClassSchedule(2,"화"), ClassSchedule(3,"수"), ClassSchedule(4,"목"),
+        ClassSchedule(5,"금"), ClassSchedule(6,"1"), ClassSchedule(7,""), ClassSchedule(8,""), ClassSchedule(9,""),
+        ClassSchedule(10,""), ClassSchedule(11,""), ClassSchedule(12,"2"), ClassSchedule(13,""), ClassSchedule(14,""),
+        ClassSchedule(15,""), ClassSchedule(16,""), ClassSchedule(17,""), ClassSchedule(18,"3"), ClassSchedule(19,""),
+        ClassSchedule(20,""), ClassSchedule(21,""), ClassSchedule(22,""), ClassSchedule(23,""), ClassSchedule(24,"4"),
         ClassSchedule(25,""), ClassSchedule(26,""), ClassSchedule(27,""), ClassSchedule(28,""), ClassSchedule(29,""),
-        ClassSchedule(30,""), ClassSchedule(31,""), ClassSchedule(32,""), ClassSchedule(33,""), ClassSchedule(34,""),
-        ClassSchedule(35,""), ClassSchedule(36,""), ClassSchedule(37,""), ClassSchedule(38,""), ClassSchedule(39,""),
-        ClassSchedule(40,""), ClassSchedule(41,""), ClassSchedule(42,""), ClassSchedule(43,""), ClassSchedule(44,""),
-        ClassSchedule(45,""), ClassSchedule(46,""), ClassSchedule(47,""), ClassSchedule(48,""), ClassSchedule(49,""),
-        ClassSchedule(50,""), ClassSchedule(51,""), ClassSchedule(52,""), ClassSchedule(53,""), ClassSchedule(54,"")
+        ClassSchedule(30,"5"), ClassSchedule(31,""), ClassSchedule(32,""), ClassSchedule(33,""), ClassSchedule(34,""),
+        ClassSchedule(35,""), ClassSchedule(36,"6"), ClassSchedule(37,""), ClassSchedule(38,""), ClassSchedule(39,""),
+        ClassSchedule(40,""), ClassSchedule(41,""), ClassSchedule(42,"7"), ClassSchedule(43,""), ClassSchedule(44,""),
+        ClassSchedule(45,""), ClassSchedule(46,""), ClassSchedule(47,""), ClassSchedule(48,"8"), ClassSchedule(49,""),
+        ClassSchedule(50,""), ClassSchedule(51,""), ClassSchedule(52,""), ClassSchedule(53,"")
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,11 +67,12 @@ class ClassScheduleF : Fragment() {
             try {
                 ctList = ctdb?.classTableDao()?.getAll()!!
                 mAdapter = ClassAdapter(view.context, classItems)
-                mAdapter.notifyDataSetChanged()
 
                 class_rv_list?.adapter = mAdapter
                 class_rv_list?.layoutManager = GridLayoutManager(view.context,6)
                 class_rv_list?.setHasFixedSize(true)
+
+                mAdapter.notifyDataSetChanged()
             } catch (e: Exception) {
                 Log.d("tag", "Error = $e")
             }
