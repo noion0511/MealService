@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppColor1">
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="242dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="중앙여자고등학교"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="서울중앙여자고등학교"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cafe24ohsquareair"
+            android:letterSpacing="0.05"
+            android:background="@drawable/rectangle_background"
+            android:textColor="@color/grayColor4"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="부산중앙여자고등학교"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cafe24ohsquareair"
+            android:letterSpacing="0.05"
+            android:background="@drawable/rectangle_background"
+            android:textColor="@color/grayColor4"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="전주중앙여자고등학교"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cafe24ohsquareair"
+            android:letterSpacing="0.05"
+            android:background="@drawable/rectangle_background"
+            android:textColor="@color/grayColor4"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="청주중앙여자고등학교"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cafe24ohsquareair"
+            android:letterSpacing="0.05"
+            android:background="@drawable/rectangle_background"
+            android:textColor="@color/grayColor4"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="여수중앙여자고등학교"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cafe24ohsquareair"
+            android:letterSpacing="0.05"
+            android:background="@drawable/rectangle_background"
+            android:textColor="@color/grayColor4"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="제주중앙여자고등학교"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cafe24ohsquareair"
+            android:letterSpacing="0.05"
+            android:background="@drawable/rectangle_background"
+            android:textColor="@color/grayColor4"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="울산중앙여자고등학교"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cafe24ohsquareair"
+            android:letterSpacing="0.05"
+            android:background="@drawable/rectangle_background"
+            android:textColor="@color/grayColor4"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
